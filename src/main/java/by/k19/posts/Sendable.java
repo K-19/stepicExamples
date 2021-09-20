@@ -1,6 +1,6 @@
 package by.k19.posts;
 
-public static interface Sendable {
+public interface Sendable {
     String getFrom();
     String getTo();
 }

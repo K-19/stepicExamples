@@ -1,6 +1,6 @@
 package by.k19.posts;
 
-public static class RealMailService implements MailService {
+public class RealMailService implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {

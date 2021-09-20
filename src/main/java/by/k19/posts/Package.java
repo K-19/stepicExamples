@@ -1,6 +1,6 @@
 package by.k19.posts;
 
-public static class Package {
+public class Package {
     private final String content;
     private final int price;
 

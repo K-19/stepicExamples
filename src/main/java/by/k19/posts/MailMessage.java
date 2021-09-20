@@ -1,6 +1,6 @@
 package by.k19.posts;
 
-public static class MailMessage extends AbstractSendable {
+public class MailMessage extends AbstractSendable {
 
     private final String message;
 

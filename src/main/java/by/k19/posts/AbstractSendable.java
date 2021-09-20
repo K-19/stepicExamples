@@ -1,6 +1,6 @@
 package by.k19.posts;
 
-public static abstract class AbstractSendable implements Sendable {
+public abstract class AbstractSendable implements Sendable {
 
     protected final String from;
     protected final String to;
