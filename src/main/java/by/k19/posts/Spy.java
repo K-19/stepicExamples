@@ -12,8 +12,8 @@ public class Spy implements MailService{
     @Override
     public Sendable processMail(Sendable mail) {
         if (mail instanceof MailMessage) {
-            if (mail.getFrom().equals("Austin Powers"))
-                logger.warning("Detected target mail correspondence: from " + mail.getFrom() + " to " + mail.getTo() + "\"" + ((MailMessage) mail).getMessage() + "\"");
+            if (mail.getTo().equals("Austin Powers") || mail.getFrom().equals("Austin Powers"))
+                logger.warning("Detected target mail correspondence: from " + mail.getFrom() + " to " + mail.getTo() + " \"" + ((MailMessage) mail).getMessage() + "\"");
             else
                 logger.info("Usual correspondence: from " + mail.getFrom() + " to " + mail.getTo());
         }

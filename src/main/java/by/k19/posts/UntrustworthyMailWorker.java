@@ -15,9 +15,10 @@ public class UntrustworthyMailWorker implements MailService{
 
     @Override
     public Sendable processMail(Sendable mail) {
+        Sendable checkedMail = mail;
         for (MailService service : mailServices) {
-            mail = service.processMail(mail);
+            checkedMail = service.processMail(checkedMail);
         }
-        return getRealMailService().processMail(mail);
+        return getRealMailService().processMail(checkedMail);
     }
 }

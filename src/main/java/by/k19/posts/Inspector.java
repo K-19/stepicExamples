@@ -4,10 +4,9 @@ public class Inspector implements MailService{
     @Override
     public Sendable processMail(Sendable mail) {
         if (mail instanceof MailPackage) {
-            MailPackage mailPackage = (MailPackage) mail;
-            String content = mailPackage.getContent().getContent();
-            if ("weapons".equals(content) ||
-                "banned substance".equals(content))
+            String content = ((MailPackage)mail).getContent().getContent();
+            if (content.contains("weapons") ||
+                content.contains("banned substance"))
                 throw new IllegalPackageException();
             if (content.contains("stolen"))
                 throw new StolenPackageException();
